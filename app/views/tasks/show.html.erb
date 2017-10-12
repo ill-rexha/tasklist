@@ -1,0 +1,9 @@
+<h1><%= @task.id %>番目のタスクを表示中です</h1>
+
+<div>
+  <%= @task.status %>
+  <%= @task.content %>
+</div>
+<%= link_to '一覧に戻る',tasks_path %>
+<%= link_to 'このタスクを編集する', edit_task_path(@task)%>
+<%= link_to 'このタスクを削除する',@task, method: :delete,data:{confirm:"本当にこのタスクを削除しますか？"} %>
